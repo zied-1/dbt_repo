@@ -1,0 +1,30 @@
+version: 2
+sources:
+  - name: raw_data
+    description: source raw data
+    database: raw_data
+    schema: info
+    tables:
+      - name: salaries
+        description: table of salaries of different job in different companies and locations
+        
+        columns:
+          - name: WORK_YEAR
+            description: work_year a number XXXX
+            tests: 
+              - not_null
+
+      - name: COUNTRY_ISO_CODE
+        description: iso_codes of every country 
+        columns:
+          - name: COUNTRY_NAME
+            description: names of country
+            tests:
+              - not_null
+              - unique
+          - name: ISO_CODE_ALPHA
+            description: iso_code
+            tests:
+               - not_null
+               - unique
+                   
