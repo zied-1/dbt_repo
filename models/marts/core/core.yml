@@ -9,23 +9,20 @@ models:
         tests:
           - not_null
           - accepted_values:
-              values:
-                - ['less than 50 employees (small)','50 to 250 employees (medium)','more than 250 employees (large)']
+              values: ['less than 50 employees (small)','50 to 250 employees (medium)','more than 250 employees (large)']
 
       - name: EMPLOYMENT_TYPE_DESCR
         description: The type of employement for the role
         tests:
           - accepted_values:
-              values:
-                - ['Part-time','Full-time','Contract','Freelance']
+              values: ['Part-time','Full-time','Contract','Freelance']
 
       - name: EXPERIENCE_LEVEL_DESCR
         description: The experience level in the job during the year
         tests:
           - not_null
           - accepted_values:
-              values:
-                - ['Entry-level / Junior','Mid-level / Intermediate','Senior-level / Expert','Executive-level / Director']
+              values:  ['Entry-level / Junior','Mid-level / Intermediate','Senior-level / Expert','Executive-level / Director']
 
       - name: REMOTE_RATIO_DESCR
         description: The overall amount of work done remotely
