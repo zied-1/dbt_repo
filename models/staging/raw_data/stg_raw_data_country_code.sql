@@ -7,7 +7,7 @@ with source as (
 stg_table as (
 
     select
-     COUNTRY_NAME as company_location
+     COUNTRY_NAME as company_location,
      ISO_CODE_ALPHA
     from source
 
