@@ -1,0 +1,45 @@
+version: 2
+
+models:
+  - name: updated_salaries_table
+    description: new human_translated_table 
+    columns:
+      - name: COMPANY_SIZE_DESCR 
+        description: The average number of people that worked for the company during the year
+        tests:
+          - not_null
+          - accepted_values:
+              values:
+                - ['less than 50 employees (small)','50 to 250 employees (medium)','more than 250 employees (large)']
+
+      - name: EMPLOYMENT_TYPE_DESCR
+        description: The type of employement for the role
+        tests:
+          - accepted_values:
+              values:
+                - ['Part-time','Full-time','Contract','Freelance']
+
+      - name: EXPERIENCE_LEVEL_DESCR
+        description: The experience level in the job during the year
+        tests:
+          - not_null
+          - accepted_values:
+              values:
+                - ['Entry-level / Junior','Mid-level / Intermediate','Senior-level / Expert','Executive-level / Director']
+
+      - name: REMOTE_RATIO_DESCR
+        description: The overall amount of work done remotely
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['No remote work (less than 20%)','Partially remote/hybird','Fully remote (more than 80%)']
+      - name: WORK_YEAR
+        description: The year the salary was paid
+      - name: SALARY_IN_USD
+        description: The salary in USD (FX rate divided by avg. USD rate of respective year) via statistical data from the BIS and central banks.
+      - name: SALARY_CURRENCY
+        description: The currency of the salary paid as an ISO 4217 currency code
+      - name: SALARY
+        description: The total gross salary amount paid
+      - name: JOB_TITLE
+        description: The role worked in during the year

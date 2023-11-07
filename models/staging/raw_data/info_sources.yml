@@ -11,7 +11,7 @@ sources:
         columns:
           - name: WORK_YEAR
             description: work_year a number XXXX
-            tests: 
+            tests:
               - not_null
 
       - name: COUNTRY_ISO_CODE
