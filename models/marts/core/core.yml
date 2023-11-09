@@ -29,7 +29,10 @@ models:
         tests:
           - not_null
           - accepted_values:
-              values: ['No remote work (less than 20%)','Partially remote/hybird','Fully remote (more than 80%)']
+              values:
+                - 'No remote work (less than 20%)'
+                - 'Partially remote/hybird'
+                - 'Fully remote (more than 80%)'
       - name: WORK_YEAR
         description: The year the salary was paid
       - name: SALARY_IN_USD
